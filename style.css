@@ -1,0 +1,215 @@
+/* ===================== СБРОС СТИЛЕЙ ===================== */
+/* Применяется ко ВСЕМ элементам на странице */
+* {
+    margin: 0;           /* убираем внешние отступы у всех элементов */
+    padding: 0;          /* убираем внутренние отступы у всех элементов */
+    box-sizing: border-box; /* важное правило: width включает в себя padding и border */
+}
+
+/* ===================== СТИЛИ ДЛЯ ВСЕЙ СТРАНИЦЫ ===================== */
+body {
+    font-family: Arial, sans-serif;   /* какой шрифт будет по умолчанию */
+    line-height: 1.6;                 /* расстояние между строками текста (удобно читать) */
+    background-color: #f4f7f9;        /* светло-серый цвет фона всей страницы */
+    color: #333;                      /* основной цвет текста (тёмно-серый) */
+    padding: 20px;                    /* отступ от краёв окна браузера */
+}
+
+/* Ограничиваем ширину и центрируем главный контент */
+main {
+    max-width: 800px;     /* страница не будет шире 800 пикселей даже на большом мониторе */
+    margin: 0 auto;       /* центрирование по горизонтали */
+}
+
+/* ===================== HEADER (ШАПКА) ===================== */
+header {
+    background-color: #2c3e50;   /* тёмно-синий цвет фона */
+    color: white;                /* белый цвет текста */
+    text-align: center;          /* выравнивание текста по центру */
+    padding: 40px 20px;          /* большие внутренние отступы */
+    border-radius: 12px;         /* скругление углов */
+    margin-bottom: 30px;         /* отступ снизу от шапки */
+}
+
+h1 {
+    font-size: 2.8em;            /* очень большой размер заголовка */
+    margin-bottom: 10px;         /* отступ снизу от h1 */
+}
+
+/* ===================== SECTION (БЛОКИ КОНТЕНТА) ===================== */
+section {
+    background-color: white;           /* белый фон для блоков */
+    padding: 25px;                     /* внутренние отступы внутри блока */
+    margin-bottom: 25px;               /* расстояние между секциями */
+    border-radius: 12px;               /* скруглённые углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* лёгкая тень для красоты */
+}
+
+h2 {
+    color: #2c3e50;          /* тёмно-синий цвет заголовков второго уровня */
+    margin-bottom: 15px;     /* отступ снизу от h2 */
+    font-size: 1.8em;        /* размер заголовка */
+}
+
+/* Стили для картинки */
+img {
+    max-width: 280px;        /* картинка не больше 280px в ширину */
+    border-radius: 12px;     /* скругление углов у фото */
+    margin: 10px 0 20px 0;   /* отступы сверху, снизу */
+    display: block;          /* чтобы картинка была отдельным блоком */
+}
+
+/* Стили для списка навыков */
+ul {
+    padding-left: 20px;      /* отступ слева для маркеров списка */
+}
+
+li {
+    margin: 10px 0;          /* расстояние между пунктами списка */
+    font-size: 1.1em;        /* чуть крупнее обычного текста */
+}
+
+/* ===================== FOOTER (ПОДВАЛ) ===================== */
+footer {
+    text-align: center;            /* текст по центру */
+    padding: 20px;                 /* внутренние отступы */
+    background-color: #2c3e50;     /* тот же тёмный цвет как у шапки */
+    color: white;                  /* белый текст */
+    border-radius: 12px;           /* скругление */
+    margin-top: 30px;              /* отступ сверху */
+}
+
+/* ===================== FLEXBOX PRACTICE ===================== */
+
+.container {
+    background-color: #e0e7ff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    min-height: 300px;
+
+    /* Новое свойство */
+    flex-direction: row;     /* ← попробуй поменять */
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+/* ===================== КАРТОЧКИ ТОВАРОВ ===================== */
+.products-container {
+    display: flex;
+    justify-content: center;     /* по центру */
+    align-items: flex-start;     /* выравнивание по верху */
+    gap: 25px;                   /* расстояние между карточками */
+    flex-wrap: wrap;             /* перенос на новую строку, если мало места */
+    padding: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;                /* фиксированная ширина карточки */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;  /* плавное увеличение при наведении */
+}
+
+.product-card:hover {
+    transform: scale(1.05);      /* карточка немного увеличивается при наведении */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #219653;
+}
+
+.my-products {
+    display: flex;
+    justify-content: center;     /* по центру */
+    align-items: flex-start;     /* выравнивание по верху */
+    gap: 25px;                   /* расстояние между карточками */
+    flex-wrap: wrap;             /* перенос на новую строку, если мало места */
+    padding: 20px;
+}
+
+.tech-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;                /* фиксированная ширина карточки */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;  /* плавное увеличение при наведении */
+}
+
+.tech-card-hit {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;                /* фиксированная ширина карточки */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;  /* плавное увеличение при наведении */
+}
+
+.hot {
+    color: red;
+    text-align: end;
+}
+
+.tech-card-hit:hover {
+    transform: scale(1.05);      /* карточка немного увеличивается при наведении */
+}
+
+.tech-card:hover {
+    transform: scale(1.05);      /* карточка немного увеличивается при наведении */
+}
+
+.my-products img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.my-products h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
